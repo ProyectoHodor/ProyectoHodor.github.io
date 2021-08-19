@@ -1,0 +1,19 @@
+html, body {
+	font-family				: 'helvetica', sans-serif;
+}
+.modelo {
+	border: 1px solid #dee2e6 !important;
+	background-color: #f8f9fa !important;
+}
+.head {
+	background-color: rgba(175,213,255,1) !important;
+}
+.nivel {
+	background-color: rgba(175,213,255,.5) !important;
+}
+.pregunta {
+	background-color: rgba(175,213,255,.2) !important;
+}
+.respuesta {
+	background-color: rgba(175,213,255,.1) !important;
+}

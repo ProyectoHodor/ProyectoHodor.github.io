@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<script type="text/javascript" src="./js/JSFunctions.js"></script>
+
+	<title></title>
+	<script>
+
+	</script>
+</head>
+
+<body>
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script type="text/javascript" src="./js/bootstrap.bundle.min.js"></script>
+
+	<form id="asistenteForm" class="row g-3 needs-validation" method="post" action="ASISTENTE.html" novalidate>
+		<div class="container" style="background-image: url('./img/hodor.jfif');">
+			<div class="row">
+				<div class="col-6 py-2 alert alert-primary bg-secondary text-white w-100 mt-3 font-weight-bold"
+					role="alert">
+					<span id='version' data-toggle="tooltip" data-placement="top"></span>&nbsp;-&nbsp;
+					<span id='autores' data-toggle="tooltip" data-placement="top"></span>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2 col-6 py-2 modelo pregunta font-weight-bold">Usuario</div>
+				<div class="col-md-4 col-6 py-2 modelo respuesta">
+					<input id="P1" type="text" class="form-control" required>
+					<div class="valid-feedback">
+						Ok!
+					</div>
+					<div class="invalid-feedback font-weight-bold">
+						Debe completar este campo!
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2 col-6 py-2 modelo pregunta font-weight-bold">Contraseña
+				</div>
+				<div class="col-md-4 col-6 py-2 modelo respuesta">
+
+					<input class="form-control" type="password" id="psw" name="psw"
+						pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+					<div class="valid-feedback">
+						Ok!
+					</div>
+					<div id="pswMsg" class="invalid-feedback font-weight-bold"></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-6 py-2 modelo nivel text-right">
+					<button id="btnNext" class="btn btn-primary" type="type" data-toggle="tooltip" data-placement="top"
+						title="Permite acceder al asistente">Ingresar</button>
+				</div>
+			</div>
+		</div>
+	</form>
+
+	<script>
+		// Example starter JavaScript for disabling form submissions if there are invalid fields
+		(function () {
+			'use strict'
+			// Fetch all the forms we want to apply custom Bootstrap validation styles to
+			var forms = document.querySelectorAll('.needs-validation')
+
+			// Loop over them and prevent submission
+			Array.prototype.slice.call(forms)
+				.forEach(function (form) {
+					form.addEventListener('submit', function (event) {
+						if (!form.checkValidity()) {
+							event.preventDefault()
+							event.stopPropagation()
+						}
+						form.classList.add('was-validated')
+					}, false)
+				})
+		})()
+		//******************************************
+		document.title = proyectName;
+		document.getElementById('version').innerHTML = proyectName;
+		document.getElementById('version').title = desarrollador;
+		document.getElementById('autores').innerHTML = autores;
+		document.getElementById('psw').title = msgPsw;
+		document.getElementById('pswMsg').innerHTML = msgPsw;
+
+		//******************************************
+	</script>
+</body>
+
+</html>
